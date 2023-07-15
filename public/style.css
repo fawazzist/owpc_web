@@ -1,156 +1,179 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-.logo {
-  height: 300px;
-  width: aut;
+:root {
+  --blue-color:#150890;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: linear-gradient(to right, #1e3c72, #010814);
-  color: #fff;
+.hero li {
+  list-style-type: upper-roman;
+  color: rgb(242, 241, 241);
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  background-color: #1e3c72;
-}
-
-.header img {
-  height: 30px;
-  width: auto;
-}
-
-.navbar {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #1e3c72;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.navbar li {
-  margin: 0 5px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
+h2 {
+  color: rgb(224, 186, 15);
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  padding: 50px 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 80px;
-  text-align: center;
+  text-align: base;
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin: 0;
+p {
+  font-family: "Archivo", sans-serif;
 }
 
-.hero p {
-  margin: 10px 0;
-}
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1e3c72;
-  padding: 15px;
   color: white;
-  flex: 0 0 auto;
-  margin-top: auto;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  padding: 20px;
 }
-
 .footer img {
-  height: 30px;
-  width: auto;
+  height: 50px;
 }
-
 .footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
-
 .footer li {
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
-
 .footer li:last-child {
   margin-right: 0;
 }
-
 .footer li img {
   height: 20px;
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-  }
+/* HOME STYLE */
 
-  .header img {
-    height: 60px;
-    width: auto;
-    margin-bottom: 10px;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  flex-direction: row-reverse;
+}
+.header img {
+  height: 50px;
+}
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar li {
+  margin: 0 10px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 50px 20px;
+  width: 100%;
+  /* This will make the hero section fit on all screens */
+  max-width: 1000px;
+  /* This will make the hero section responsive */
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 36px;
+  margin: 0;
+}
+.hero p {
+  margin: 10px 0 0 0;
+}
+.footer {
+  background-color: #1e3c72;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.about {
+  margin: 20px 0;
+}
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.about p {
+  margin-bottom: 10px;
+}
+.hero img{
+  max-width: 100%;
+  height: auto;
+}
 
-  .navbar {
-    flex-direction: row;
-    justify-content: space-around;
-    position: static;
-    margin-top: 20px;
-  }
 
-  .navbar li {
-    margin: 0;
-  }
+/* faqs */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .hero {
-    margin-top: 20px;
-    padding-top: 20px;
-  }
+.form-container input[type="text"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  color: #333;
+}
 
-  .footer {
-    position: static;
-    margin-top: 20px;
-  }
+.form-container input[type="text"]:hover,
+.form-container textarea:hover {
+  border-bottom: 1px solid rgb(224, 186, 15);
+}
+
+.form-container textarea {
+  height: 100px;
+  resize: none;
+}
+
+.form-container input[type="submit"] {
+  background-color: rgb(224, 186, 15);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: rgba(224, 186, 15, 0.8);
+}
+
+.form-container .icon {
+  color: rgb(224, 186, 15);
+}
+
+.form-container .image-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-container .image-container img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
